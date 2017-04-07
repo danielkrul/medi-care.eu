@@ -1,0 +1,312 @@
+@keyframes blink { 
+   50% { border-color: #cf000f; } 
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	font-family: 'Cardo', serif;
+	font-size: 1em;
+}
+
+#page{
+	height: 100%;
+	width: 100%;
+}
+
+#page #inner{
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#page #inner header#head{
+	display: flex;
+	background: #263238;
+}
+
+#page #inner header#head .left{
+	text-align: center;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+#page #inner header#head .left a{
+	text-decoration: none;
+	color: black;
+}
+
+#page #inner header#head .left a h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.7em;
+	color: white;
+}
+
+#page #inner header#head .left a h1 span.colored{
+	color: #CF000F;
+}
+
+#page #inner header#head .left a h2{
+	font-family: 'Cardo', sans-serif;
+	color: #CF000F;
+	font-weight: bold;
+	margin-top: .2em;
+}
+
+#page #inner header#head .right{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	text-align: right;
+    justify-content: flex-end;
+}
+
+#page #inner header#head .right .menu{
+	margin-right: 1em;
+}
+
+#page #inner header#head .right .menu a{
+	color: white;
+	text-decoration: none;
+	padding: .5em;
+	border-radius: 4px;
+	font-family: sans-serif;
+}
+
+#page #inner header#head .right .menu a.selected{
+	background: #39569b;
+}
+
+#page #inner #content{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#page #inner #content .innerLogin{
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+#page #inner #content .innerLogin .login{
+	margin: 0 auto;
+	width: 25%;
+}
+
+#page #inner #content .innerLogin .login table{
+	width: 100%;
+}
+
+#page #inner #content .innerLogin .login table tr td .spacer{
+	height: .3em;
+}
+
+#page #inner #content .innerLogin .login table tr td .bigSpacer{
+	height: .6em;
+}
+
+#page #inner #content .innerLogin .login .style{
+	border: 1px solid rgba(0, 0, 0, .20);
+    border-radius: 4px;
+    width: 95%;
+    padding: .5em;
+    font-size: 1em;
+}
+
+#page #inner #content .innerLogin .login select{
+	border: 1px solid rgba(0, 0, 0, .20);
+    border-radius: 4px;
+    /* width: 95%; */
+    background: white;
+    padding: .5em;
+    font-size: 1em;
+}
+
+#page #inner #content .innerLogin .login input.button{
+	background: #446CB3;
+	border: 1px solid #446CB3;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em;
+    padding: .5em;
+    width: 100%;
+}
+
+#page #inner #content .innerLogin .login input:focus{
+	outline: 0;
+}
+
+#page #inner #content .innerLogin .login label{
+	display: flex;
+	align-items: center;
+	color: gray;
+}
+
+#page #inner #content .innerLogin .login label input{
+	margin-right: 1em;
+}
+
+#page #inner #content .innerLogin .login .errorBox{
+	margin-bottom: .5em;
+	color: #CF000F;
+	text-align: center;
+}
+
+#page #inner #content .innerLogin .login .registerDevice{
+	margin-top: .5em;
+}
+
+#page #inner #content .innerLogin .login .registerDevice a{
+	color: #CF000F;
+}
+
+#page #inner #content .boxes{
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 2em;
+}
+
+#page #inner #content .boxes .box{
+	width: calc(100% / 3);
+    text-align: center;
+    margin-top: .5em;
+}
+
+#page #inner #content .boxes .box:hover{
+}
+
+#page #inner #content .boxes .box .title h2{
+	font-size: 2em;
+}
+
+#page #inner #content .boxes .box .title h2 span{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#page #inner #content .boxes .box .icon img{
+	width: 22%;
+}
+
+#page #inner #content .boxes .box .content{
+	font-size: 1.5em;
+	color: #263238;
+}
+
+#page #inner #content .position{
+	margin-top: 1em;
+}
+
+#page #inner #content .position .title{
+	margin-bottom: 1em;
+}
+
+#page #inner #content .position .title h1{
+	text-align: center;
+	color: #263238;
+}
+
+#page #inner #content .position .map{
+	margin: 0 auto;
+}
+
+#page .copyright{
+	display: flex;
+}
+
+#page .copyright .left{
+	flex: 1;
+	display: flex;
+	align-items: flex-end;
+}
+
+#page .copyright .left .icons{
+	margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+#page .copyright .right{
+	flex: 1;
+}
+
+#page .copyright .right .authors{
+	text-align: right;
+	margin-bottom: .5em;
+	margin-right: 1em;
+}
+
+#calling{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 51, 51, .8);
+	top: 0;
+	display: flex;
+	align-items: center;
+}
+
+#calling .dialog{
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	border: 10px solid transparent;
+	animation: blink .5s step-end infinite alternate;
+}
+
+#calling .dialog .top{
+	margin-bottom: 1em;
+}
+
+#calling .dialog .top h2{
+	text-align: center;
+	color: #263238;
+	text-transform: uppercase;
+}
+
+#calling .dialog .bottom{
+	display: flex;
+	align-items: center;
+}
+
+#calling .dialog .bottom .right{
+	flex: 1;
+	margin-left: 1em;
+}
+
+#calling .dialog .bottom .right h3{
+	font-weight: normal;
+}
+
+#calling .dialog .bottom .left img{
+	width: 100px;
+}
+
+#page #inner #content .text{
+	margin: 2em;
+	font-size: 1.1em;
+}
+
+#page #inner #content .text h2{
+	text-align: center;
+	font-family: 'Montserrat';
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
